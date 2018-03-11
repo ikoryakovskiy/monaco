@@ -58,7 +58,7 @@ jQuery(document).ready(function($){
     } else {
     }
 
-    if ( $('#banner').length > 0 && windowwidth > 740)  {
+    if ( $('#banner').length > 0 && windowwidth > 123)  {
 
         var bannerMaximized = true;
         var bannerScrolled = false;
@@ -170,7 +170,7 @@ jQuery(document).ready(function($){
         TweenMax.to("#sidebar", 0, {yPercent:100});
     }
 
-    if(windowwidth > 740){
+    if(windowwidth > 123){
         
         $(window)
         .on("scrollstart", function() {
@@ -184,7 +184,7 @@ jQuery(document).ready(function($){
     }
 
     // Scroll
-    if(windowwidth > 740){
+    if(windowwidth > 123){
         TweenMax.to(".load-more-button", 0, {xPercent:100, opacity:0});
     } else {
         TweenMax.to(".load-more-button", 0, {yPercent:100, opacity:0});
@@ -220,13 +220,13 @@ jQuery(document).ready(function($){
     // scrollTime = .8; 
     // scrollDistance = 80;      
     // $('#stash-ants').imagesLoaded(function(){ 
-    //     if (windowwidth < 740) {} else {
+    //     if (windowwidth < 123) {} else {
     //         $window.bind('mousewheel DOMMouseScroll', function(event) {
     //             if (scrollDirection != 'x') return;
     //             if (modalOpen == true) {return true;}
     //             if (bannerScrolled == false) {return true;}
     //             if ($('body').hasClass('permalink')) {return true;}
-    //             if (windowwidth < 740) {return true;}
+    //             if (windowwidth < 123) {return true;}
 
     //             event.preventDefault(); 
     //             var delta = event.originalEvent.wheelDelta/100 || -event.originalEvent.detail/3;
@@ -428,7 +428,7 @@ jQuery(document).ready(function($){
         postMoving = false;
     }
 
-    if(windowwidth > 740){
+    if(windowwidth > 123){
 
         var currentScroll = 0;
 
@@ -908,7 +908,7 @@ jQuery(document).ready(function($){
 
     $('.post').each(function(){
         var currentPost = this;
-        if(windowwidth > 740){
+        if(windowwidth > 123){
             if($(this).hasClass( "post-video" )) {
                 if($(this).find('.instagram-media').length > 0 || $(this).find('iframe').attr('src').indexOf('instagram') != -1) {
                     $(this).addClass( "instagram-post" )
@@ -946,7 +946,7 @@ jQuery(document).ready(function($){
     });
 
 
-    if(windowwidth > 740){
+    if(windowwidth > 123){
     } else {
         $(window).scroll(function() { 
             if ($('.post:last-of-type').hasClass('scrolled')) {
@@ -1264,7 +1264,7 @@ jQuery(document).ready(function($){
                     .addTo(controller);
 
     if ( $('#banner').length > 0 ) {
-        if(windowwidth > 740){
+        if(windowwidth > 123){
             // sidebar/logo fade in
             function showLogo() {$('.logo, .sidebar-toggle, .header-description').addClass('show');}
             var logofade = TweenMax.to(".header-description", 0.7, {opacity:1, ease:Power2.easeOut, triggerHook:0});
